@@ -6,7 +6,15 @@
     
 */
 
-const frases = [
+
+
+
+//jQuery
+
+//selecionando o document para ser lido antes de executar o jquery
+$(document).ready(function () {
+
+  const frases = [
     "A vida trará coisas boas se tiveres paciência.",
     "Demonstre amor e alegria em todas as oportunidades e verás que a paz nasce dentro de você.",
     "Não compense na ira o que lhe falta na razão.",
@@ -21,5 +29,17 @@ const frases = [
     "Siga os bons e aprenda com eles.",
     "Não importa o tamanho da montanha, ela não pode tapar o sol.",
     "O bom-senso vai mais longe do que muito conhecimento.",
-]
+  ]
 
+
+  //pegando o elemento img pela class
+  $('.biscoito').click(function () {
+
+    //criando o numero randomico para sorteio de frases
+    const numRandomico = Math.floor(Math.random() * frases.length)
+    $('#message').text(frases[numRandomico])
+  })
+
+
+
+})
